@@ -20,7 +20,8 @@ function showEmbed(response) {
   if (response) {
     var viewportId = JSON.parse(response).response.contentId;
     var embed = document.createElement('iframe');
-    embed.style = "width:100%;height: 500px;"
+    embed.setAttribute('allowFullScreen', '');
+    embed.style = "width:500px;height: 500px;"
     embed.src = "https://embed.viewportvr.co/embed/" + viewportId;
     document.getElementById('embed').appendChild(embed);
   }
